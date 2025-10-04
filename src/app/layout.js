@@ -1,25 +1,30 @@
 import "./globals.css";
-import Header from "./components/header";
-import Sidebar from "./components/sidebar";
+import Sidebar from "./components/Sidebar";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 export const metadata = {
-  title: "SafeWay",
-  description: "Rotas Seguras",
+  title: "SafeWay Dashboard",
+  description: "Sistema de análise e predição",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
-      <body className="flex min-h-screen">
-        {/* Sidebar à esquerda */}
+      <body className="flex h-screen bg-gray-100">
+        {/* Sidebar fixa */}
         <Sidebar />
 
+        {/* Conteúdo principal */}
         <div className="flex flex-col flex-1">
           {/* Header no topo */}
           <Header />
 
-          {/* Conteúdo da página */}
-          <main className="p-6">{children}</main>
+          {/* Área de conteúdo que cresce e ocupa o espaço restante */}
+          <main className="flex-1 p-6 overflow-y-auto">{children}</main>
+
+          {/* Footer no final da página */}
+          <Footer />
         </div>
       </body>
     </html>
