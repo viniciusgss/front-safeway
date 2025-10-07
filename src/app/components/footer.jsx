@@ -1,5 +1,11 @@
 import React from "react";
-import { FaInstagram, FaTwitter, FaLinkedin, FaYoutube, FaGithub } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaTwitter,
+  FaLinkedin,
+  FaYoutube,
+  FaGithub,
+} from "react-icons/fa";
 import Link from "next/link";
 
 function Footer() {
@@ -14,12 +20,15 @@ function Footer() {
               Safe<span className="text-blue-500">Way</span>
             </p>
             <div className="flex gap-6 pb-5">
-              <FaInstagram className="text-2xl cursor-pointer hover:text-yellow-400 transition-colors" />
-              <FaTwitter className="text-2xl cursor-pointer hover:text-blue-400 transition-colors" />
-              <FaLinkedin className="text-2xl cursor-pointer hover:text-blue-400 transition-colors" />
-              <FaYoutube className="text-2xl cursor-pointer hover:text-red-500 transition-colors" />
-              <FaGithub className="text-2xl cursor-pointer hover:text-gray-400 transition-colors" />
-              <Link><FaGithub className="text-2xl cursor-pointer hover:text-gray-400 transition-colors" /></Link>
+
+              {/* GitHub com link */}
+              <Link
+                href="https://github.com/seuusuario"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub className="text-2xl cursor-pointer hover:text-gray-400 transition-colors" />
+              </Link>
             </div>
           </ul>
         </div>
@@ -76,10 +85,10 @@ function Footer() {
 
       {/* Linha inferior */}
       <div className="flex flex-col justify-center items-center text-center p-5 bg-gray-900 text-gray-300">
-        <h1 className="font-semibold">
-          © Arthur pedro | Pedro lacerda | Vinícius Gabriel |  ❤ by{" "}
+        <h1 className="font-semibold text-sm md:text-base">
+          © Arthur Pedro |Rayra Lima | Pedro Lacerda | Vinícius Gabriel — nós amamos Rafaela ❤{" "}
           <span className="hover:text-blue-400 font-semibold cursor-pointer transition-colors">
-            streamline
+            
           </span>
         </h1>
       </div>
