@@ -11,19 +11,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
-      <body className="flex h-screen bg-gray-100">
+      <body className="relative flex min-h-screen bg-[#0d1117] text-gray-100">
+        {/* Luz de fundo suave */}
+        <div className="fixed inset-0 bg-gradient-radial from-blue-800/20 via-transparent to-transparent blur-3xl pointer-events-none"></div>
+
         {/* Sidebar fixa */}
-        <Sidebar />
+        <Sidebar className="fixed left-0 top-0 h-full z-20" />
 
         {/* Conteúdo principal */}
-        <div className="flex flex-col flex-1">
-          {/* Header no topo */}
+        <div className="flex flex-col flex-1 ml-16 relative">
           <Header />
-
-          {/* Área de conteúdo que cresce e ocupa o espaço restante */}
-          <main className="flex-1 p-6 overflow-y-auto">{children}</main>
-
-          {/* Footer no final da página */}
+          <main className="flex-grow p-6 overflow-y-auto mt-[4rem]">{children}</main>
           <Footer />
         </div>
       </body>
