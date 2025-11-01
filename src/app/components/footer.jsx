@@ -36,49 +36,53 @@ function Footer() {
         {/* Seções */}
         <div className="p-5">
           <ul>
-            <p className="font-bold text-2xl pb-4">Product</p>
+            <p className="font-bold text-2xl pb-4">Front-End</p>
             <li className="text-gray-300 text-md pb-2 font-semibold hover:text-white cursor-pointer">
-              Stocks
+              React-js
             </li>
             <li className="text-gray-300 text-md pb-2 font-semibold hover:text-white cursor-pointer">
-              Futures & Options
+              tailwindcss
             </li>
             <li className="text-gray-300 text-md pb-2 font-semibold hover:text-white cursor-pointer">
-              Mutual Funds
+              Next-js
             </li>
             <li className="text-gray-300 text-md pb-2 font-semibold hover:text-white cursor-pointer">
-              Fixed deposits
-            </li>
-          </ul>
-        </div>
-
-        <div className="p-5">
-          <ul>
-            <p className="font-bold text-2xl pb-4">Company</p>
-            <li className="text-gray-300 text-md pb-2 font-semibold hover:text-white cursor-pointer">
-              About
+              javascript
             </li>
           </ul>
         </div>
 
         <div className="p-5">
           <ul>
-            <p className="font-bold text-2xl pb-4">Support</p>
+            <p className="font-bold text-2xl pb-4">Integrantes</p>
             <li className="text-gray-300 text-md pb-2 font-semibold hover:text-white cursor-pointer">
-              Contact
+              Arthur Pedro
             </li>
             <li className="text-gray-300 text-md pb-2 font-semibold hover:text-white cursor-pointer">
-              Support Portals
+              Pedro Lacerda
             </li>
             <li className="text-gray-300 text-md pb-2 font-semibold hover:text-white cursor-pointer">
-              List Of Charges
+              Vinícius Gabriel
+            </li>
+          </ul>
+        </div>
+
+        <div className="p-5">
+          <ul>
+            <p className="font-bold text-2xl pb-4">Back-End</p>
+            <li className="text-gray-300 text-md pb-2 font-semibold hover:text-white cursor-pointer">
+              Python
             </li>
             <li className="text-gray-300 text-md pb-2 font-semibold hover:text-white cursor-pointer">
-              Downloads & Resources
+              Pandas
             </li>
             <li className="text-gray-300 text-md pb-2 font-semibold hover:text-white cursor-pointer">
-              Videos
+              LightGBM 
             </li>
+            <li className="text-gray-300 text-md pb-2 font-semibold hover:text-white cursor-pointer">
+              Sklearing
+            </li>
+
           </ul>
         </div>
       </div>
@@ -86,7 +90,7 @@ function Footer() {
       {/* Linha inferior */}
       <div className="flex flex-col justify-center items-center text-center p-5 bg-gray-900 text-gray-300">
         <h1 className="font-semibold text-sm md:text-base">
-          © Arthur Pedro |Rayra Lima | Pedro Lacerda | Vinícius Gabriel — nós amamos Rafaela ❤{" "}
+          © Arthur Pedro |Rayra Lima | Pedro Lacerda | Vinícius Gabriel{" "}
           <span className="hover:text-blue-400 font-semibold cursor-pointer transition-colors">
             
           </span>

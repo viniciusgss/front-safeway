@@ -5,7 +5,7 @@ import axios from 'axios';
 import { FaChartLine, FaSpinner, FaExclamationTriangle, FaCheckCircle } from 'react-icons/fa';
 
 // URL base da API fornecida pelo usuário
-const API_BASE_URL = 'https://preditor-ofc.onrender.com';
+const API_BASE_URL = 'http://localhost:8000';
 
 // Estrutura inicial dos dados de entrada
 const initialFormData = {
@@ -112,23 +112,29 @@ export default function PredicaoPage() {
   );
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white p-4 sm:p-8">
-      <div className="max-w-5xl mx-auto">
-        <header className="flex items-center justify-between mb-8 border-b border-gray-700 pb-4">
-          <h1 className="text-4xl font-extrabold text-indigo-400 flex items-center">
-            <FaChartLine className="mr-3 text-indigo-500" />
-            Predição de Acidentes
-          </h1>
-        </header>
+    <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center p-4">
+    <div className="w-full max-w-2xl">
+      {/* Cabeçalho */}
+      <header className="flex items-center justify-center mb-8 border-b border-gray-700 pb-4">
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-indigo-400 flex items-center">
+          <FaChartLine className="mr-3 text-indigo-500" />
+          Predição de Acidentes
+        </h1>
+      </header>
 
-        <div className="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-2xl">
-          <p className="text-gray-400 mb-6">
+
+        {/* Formulário Principal - fundo menor e mais elegante */}
+        <div className="bg-[#111827] p-8 rounded-xl shadow-xl w-full mx-auto">
+          <p className="text-gray-400 mb-6 text-center">
             Insira os parâmetros para prever a quantidade de acidentes rodoviários.
           </p>
 
           {/* Área de Mensagens (Erro/Sucesso) */}
           {error && (
-            <div className="flex items-center p-4 mb-6 text-sm text-red-400 bg-red-900/50 rounded-lg border border-red-700" role="alert">
+            <div
+              className="flex items-center p-4 mb-6 text-sm text-red-400 bg-red-900/50 rounded-lg border border-red-700"
+              role="alert"
+            >
               <FaExclamationTriangle className="mr-3 h-5 w-5" />
               <div>
                 <span className="font-medium">Erro:</span> {error}
@@ -136,18 +142,17 @@ export default function PredicaoPage() {
             </div>
           )}
 
-          <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Inputs Categóricos (Select Boxes) */}
+          {/* Formulário */}
+          <form onSubmit={handleSubmit} className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <InputField label="UF" name="uf" options={mappings.uf || []} />
             <InputField label="Município" name="municipio" options={mappings.municipio || []} />
             <InputField label="Tipo de Acidente" name="tipo_acidente" options={mappings.tipo_acidente || []} />
             <InputField label="Condição Meteorológica" name="condicao_metereologica" options={mappings.condicao_metereologica || []} />
-
-            {/* Inputs Numéricos e de Data */}
             <InputField label="Hora Média (0-23)" name="hora_media" type="number" min="0" max="23" />
             <InputField label="Data do Acidente" name="data_acidente" type="date" />
 
-            <div className="md:col-span-2 lg:col-span-3 pt-4">
+            {/* Botão */}
+            <div className="sm:col-span-2 pt-2">
               <button
                 type="submit"
                 disabled={loading || Object.keys(mappings).length === 0}
@@ -171,13 +176,14 @@ export default function PredicaoPage() {
 
           {/* Resultado da Predição */}
           {prediction !== null && (
-            <div className="mt-10 p-6 bg-green-900/50 border border-green-700 rounded-xl shadow-inner">
-              <h2 className="text-2xl font-bold text-green-400 flex items-center mb-2">
+            <div className="mt-8 p-6 bg-green-900/50 border border-green-700 rounded-xl shadow-inner text-center">
+              <h2 className="text-2xl font-bold text-green-400 flex items-center justify-center mb-2">
                 <FaCheckCircle className="mr-3 h-6 w-6" />
                 Resultado da Predição
               </h2>
               <p className="mt-2 text-xl text-green-200">
-                A quantidade prevista de acidentes é: <span className="font-extrabold text-3xl text-green-400">{prediction}</span>
+                A quantidade prevista de acidentes é:{' '}
+                <span className="font-extrabold text-3xl text-green-400">{prediction}</span>
               </p>
             </div>
           )}
