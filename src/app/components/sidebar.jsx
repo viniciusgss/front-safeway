@@ -57,10 +57,10 @@ export default function Sidebar({ className = "" }) {
             {isExpanded && <span className="text-sm font-medium">Predição</span>}
           </Link>
 
-          <Link href="/deeplearning" className={getLinkClassName("/deeplearning")}>
+          {/* <Link href="/deeplearning" className={getLinkClassName("/deeplearning")}>
             <FaRobot size={22} />
             {isExpanded && <span className="text-sm font-medium">Deep Learning</span>}
-          </Link>
+          </Link> */}
         </nav>
       </div>
 

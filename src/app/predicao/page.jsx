@@ -5,7 +5,7 @@ import axios from 'axios';
 import { FaChartLine, FaSpinner, FaExclamationTriangle, FaCheckCircle } from 'react-icons/fa';
 
 // URL base da API fornecida pelo usuário
-const API_BASE_URL = 'http://localhost:8000';
+const API_BASE_URL = 'https://preditor-ofc.onrender.com';
 
 // Estrutura inicial dos dados de entrada
 const initialFormData = {
@@ -132,7 +132,7 @@ export default function PredicaoPage() {
           {/* Área de Mensagens (Erro/Sucesso) */}
           {error && (
             <div
-              className="flex items-center p-4 mb-6 text-sm text-red-400 bg-red-900/50 rounded-lg border border-red-700"
+              className="flex items-center p-4 mb-6 text-sm text-red-400 bg-red-900/50 rounded-lg border border-red-400"
               role="alert"
             >
               <FaExclamationTriangle className="mr-3 h-5 w-5" />
