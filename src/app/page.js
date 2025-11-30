@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { FaChartLine, FaBrain, FaRobot, FaArrowRight } from 'react-icons/fa';
+import { FaChartLine, FaBrain, FaRobot, FaArrowRight, FaRoute, FaComments } from 'react-icons/fa';
 
 export default function Home() {
   return (
@@ -53,7 +53,7 @@ export default function Home() {
             Nossas Funcionalidades
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Card Dashboard */}
             <div className="group bg-gradient-to-br from-[#1a1f3a] to-[#2d1b4e] p-8 rounded-xl border border-purple-500/20 hover:border-purple-500/50 transition duration-300 transform hover:scale-105 hover:shadow-2xl">
               <div className="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg mb-6 group-hover:scale-110 transition duration-300">
@@ -74,9 +74,9 @@ export default function Home() {
             {/* Card Predição */}
             <div className="group bg-gradient-to-br from-[#1a1f3a] to-[#2d1b4e] p-8 rounded-xl border border-purple-500/20 hover:border-purple-500/50 transition duration-300 transform hover:scale-105 hover:shadow-2xl">
               <div className="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-green-500 to-purple-500 rounded-lg mb-6 group-hover:scale-110 transition duration-300">
-                <FaRobot className="text-white text-2xl" />
+                <FaBrain className="text-white text-2xl" />
               </div>
-              <h3 className="text-2xl font-bold text-purple-400 mb-3">🤖 Predição</h3>
+              <h3 className="text-2xl font-bold text-purple-400 mb-3">🧠 Predição</h3>
               <p className="text-gray-400 leading-relaxed mb-4">
                 Utilize modelos de aprendizado de máquina para prever acidentes. 
                 Analise fatores como data, hora, localização e condições meteorológicas.
@@ -87,24 +87,40 @@ export default function Home() {
                 </button>
               </Link>
             </div>
-
-            {/* Card Deep Learning 
+            
+            {/* Card Mapa de Rotas (Novo) */}
             <div className="group bg-gradient-to-br from-[#1a1f3a] to-[#2d1b4e] p-8 rounded-xl border border-purple-500/20 hover:border-purple-500/50 transition duration-300 transform hover:scale-105 hover:shadow-2xl">
-              <div className="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-pink-500 to-purple-500 rounded-lg mb-6 group-hover:scale-110 transition duration-300">
-                <FaBrain className="text-white text-2xl" />
+              <div className="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-pink-500 to-red-500 rounded-lg mb-6 group-hover:scale-110 transition duration-300">
+                <FaRoute className="text-white text-2xl" />
               </div>
-              <h3 className="text-2xl font-bold text-purple-400 mb-3">🧠 Deep Learning</h3>
+              <h3 className="text-2xl font-bold text-purple-400 mb-3">🗺️ Mapa de Rotas</h3>
               <p className="text-gray-400 leading-relaxed mb-4">
-                Algoritmos avançados calculam rotas seguras em tempo real, 
-                sugerindo os melhores caminhos para evitar acidentes e congestionamentos.
+                Calcule rotas otimizadas entre dois pontos, considerando o risco de acidentes 
+                em tempo real para sugerir caminhos mais seguros.
               </p>
-              <Link href="/deeplearning">
+              <Link href="/mapa">
                 <button className="text-purple-400 hover:text-pink-400 font-semibold flex items-center gap-2 transition duration-300">
                   Acessar <FaArrowRight size={16} />
                 </button>
               </Link>
-            
-            </div>  */}
+            </div>
+
+            {/* Card Chatbot (Novo) */}
+            <div className="group bg-gradient-to-br from-[#1a1f3a] to-[#2d1b4e] p-8 rounded-xl border border-purple-500/20 hover:border-purple-500/50 transition duration-300 transform hover:scale-105 hover:shadow-2xl">
+              <div className="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-lg mb-6 group-hover:scale-110 transition duration-300">
+                <FaComments className="text-white text-2xl" />
+              </div>
+              <h3 className="text-2xl font-bold text-purple-400 mb-3">💬 Chatbot</h3>
+              <p className="text-gray-400 leading-relaxed mb-4">
+                Interaja com os dados de acidentes usando linguagem natural. 
+                Faça perguntas e obtenha insights rápidos sobre os padrões de trânsito.
+              </p>
+              <Link href="/chatbot">
+                <button className="text-purple-400 hover:text-pink-400 font-semibold flex items-center gap-2 transition duration-300">
+                  Acessar <FaArrowRight size={16} />
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

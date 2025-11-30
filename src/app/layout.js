@@ -11,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
-      <body className="flex min-h-screen bg-gray-100">
+      <body className="flex min-h-screen bg-[#0A0E17] text-gray-100">
         {/* Sidebar fixa */}
         <Sidebar />
 
