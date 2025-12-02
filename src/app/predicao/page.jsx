@@ -4,9 +4,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import { FaChartLine, FaSpinner, FaExclamationTriangle, FaCheckCircle } from 'react-icons/fa';
 
-// ============================================
-// ALTERE ESTA URL CONFORME SEU AMBIENTE
-// ============================================
+
 const API_BASE_URL = 'http://127.0.0.1:8000/';
 // ============================================
 
