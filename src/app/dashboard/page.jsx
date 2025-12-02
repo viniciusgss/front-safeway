@@ -56,7 +56,7 @@ export default function DashboardPage() {
         setError(null);
       } catch (err) {
         console.error('Erro ao buscar dados:', err);
-        setError('Erro ao carregar dados. Verifique se a API está rodando em http://localhost:8000' );
+        setError('Erro ao carregar dados. Verifique se a API está rodando em http://127.0.0.1:8000' );
       } finally {
         setLoading(false);
       }
